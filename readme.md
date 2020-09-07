@@ -60,11 +60,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je focus:** responsive
 
-**Je opdracht:** https://www.neuralink.com/
+**Je opdracht:** https://www.neuralink.com/ of https://www.apple.com/
 
 **Screenshot(s):**
 
-![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/dummy-image.svg)
+![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/applecom.png) (images/neuralinkcom.png)
 
 **Breakdown-schets(en):**
 
