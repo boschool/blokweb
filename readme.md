@@ -6,8 +6,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Bronnenlijst
-1. -bron 1-
-2. -bron 2-
+1. https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+2. https://codepen.io/simoneas02/pen/gmREyQ
 3. -...-
 
 
@@ -31,6 +31,20 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Voortgang 2 (week 5)
 
 -same as voortgang 1-
+oefeningen scalable grid
+of archumentatie
+zoek yt responsive grid zonder media quiries
+
+maak onderscheid tussen nav's met clas main nav
+
+css tricks
+
+css hover animaties etc
+
+als je iets hebt gemaakt meteen updaten op github
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 
 
 
@@ -46,12 +60,16 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Agenda voor meeting
 
--samen met je groepje opstellen-
+Vragen:
+Root?
+Flexbox
+Geen divs wat wel?
+
 
 ### Verslag van meeting
 
--na afloop snel uitkomsten vastleggen-
-
+Meerdere articles in een section
+Een section is altijd groter
 
 
 ## Intake (week 1)
