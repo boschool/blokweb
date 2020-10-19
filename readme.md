@@ -14,7 +14,20 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Eindgesprek (week 7/8)
 
--dit ging goed & dit was lastig-
+Maak articles van de sections en sections mogen geen headers hebben
+Footer moet correct geen classes en id's
+
+img tag svg daarin laden
+
+in html zou voor animeren zijn anders niet
+
+connect de diamant naar neuralink bv hersenen foto iets mee doen
+
+geen pixels
+
+nav en detail pagina
+
+maak micro interactie nuttiger
 
 **Screenshot(s):**
 
