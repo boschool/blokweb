@@ -1,11 +1,23 @@
 /* Javascript Document */
 
-var body = document.querySelector('#body')
-var hamburger = document.querySelector('#hamburger')
+let hamburgerButton = document.querySelector('nav > button')
+console.log(hamburgerButton)
+let closeButton = document.querySelector('ul button')
 
-function hamburgerToggle(){
-	console.log('Toggle hamburger'+ hamburger.checked)
-		body.classList.toggle('hamburgerNav')
-	}
+var clicked = true;
 
-hamburger.addEventListener('change', hamburgerToggle);
+function openHamburger() {
+
+    if (clicked) {
+        hamburgerButton.innerHTML = "x"
+        clicked = false;
+    } else {
+        hamburgerButton.innerHTML = "="
+        clicked = true;
+    }
+    document.body.classList.toggle('openMenu')
+
+}
+
+hamburgerButton.addEventListener('click', openHamburger)
+closeButton.addEventListener('click', openHamburger)
