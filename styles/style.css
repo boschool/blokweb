@@ -466,4 +466,24 @@ input[type=checkbox]:checked + label
   ul:nth-of-type(2) {
     opacity: 0;
   }
-}
+  section:nth-of-type(1) {
+    padding-left: 1.9em;
+  }
+  header {
+    padding: 3.75em 1.9em 1.9em 1.9em;
+  }
+  h2 {
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+  }
+  section a p {
+    padding-left: 1.55em;
+    padding-right: 1.55em;
+  }
+  section:nth-of-type(5) {
+  padding-left: 2em;
+  }
+  footer {
+  padding: 1.9em;
+  }
+  }
