@@ -63,9 +63,10 @@
 h1 {
   font-family: 'Tiempos Headline','Times','Georgia',serif;
   margin-top: 0;
-  font-size: calc(2.6em + 1vw);
+  font-size: 3.75em;
   line-height: 1.18em;
   font-weight: 100;
+  padding-left: 1em;
 }
 
 h2 {
@@ -85,10 +86,6 @@ h2 {
   text-transform: none;
 }
 
-section:nth-of-type(5) h2 {
-  margin-left: 0;
-}
-
 section p {
   font-family: 'Untitled Sans',Helvetica,Arial,sans-serif;
   font-weight: 100;
@@ -97,6 +94,7 @@ section p {
   text-transform: none;
   list-style: none;
   font-variant: none;
+  padding-left: 3.34em;
   padding-bottom: 13.6em;
   max-width: 38ch;
 }
@@ -178,7 +176,6 @@ section:nth-of-type(1) {
   background-color: #b4bdcb;
   padding-bottom: 12.5em;
   padding-top: 12.5em;
-  padding-left: 3.75em;
 }
 
 section:nth-of-type(1) img {
@@ -226,61 +223,6 @@ section:nth-of-type(5) {
   width: 100%;
   height: 100%;
   position: relative;
-  padding-left: 3.75em;
-}
-
-button {
-  opacity: 0;
-  position: absolute;
-  color: white;
-  top: 1.8em;
-  right: 0.58em;
-  font-size: 2em;
-  font-weight: 600;
-  background-color: transparent;
-  border: none;
-  z-index: 100000;
-}
-
-header a::after, footer a::after {
-  display: none;
-}
-
-li a::after {
-  display: block;
-}
-
-li button {
-  color: #0b2436;
-  margin-top: 20em;
-}
-
-ul:nth-of-type(2) {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    color: #0b2436;
-    padding: 2em;
-    padding-top: 20em;
-    left: -100%;
-    background: white;
-    height: 100vh;
-    background-color: white;
-    width: 100vw;
-    transition: all 0.3s ease-in;
-    z-index: 10000;
-}
-
-ul:nth-of-type(2) li {
-    margin-bottom: 1em;
-    color: #0b2436;
-    background-color: grey;
-}
-
-.openMenu ul:nth-of-type(2) {
-    left: 0;
-    opacity: 1;
-    padding-top: 20em;
 }
 
 a {
@@ -288,11 +230,12 @@ a {
   color: #fff;
   text-transform: uppercase;
   height: 100%;
-  position: relative;
 }
 
+/* ----------- States ----------- */
+
 a::after {
-  background-color: white;
+  background-color: var(--color-type-white);
   content: "";
   display: block;
   height: 2px;
@@ -304,13 +247,6 @@ a::after {
   transition: transform .2s ease-in-out,color .2s ease-in-out;
   transform: scaleX(0);
 }
-
-a:hover::after {
-  transform: scaleX(1);
-}
-
-
-/* ----------- States ----------- */
 
 a:visited {
   color: #ededed;
@@ -329,13 +265,6 @@ a:active {
   text-decoration:underline;
 }
 
-section:nth-of-type(2) a, section:nth-of-type(3) a, section:nth-of-type(4) a {
-  text-decoration: none;
-}
-
-section:nth-of-type(2) a:hover::after, section:nth-of-type(3) a:hover::after, section:nth-of-type(4) a:hover::after {
-  transform: scaleX(0);
-}
 
 img {
   height: 26em;
@@ -347,6 +276,7 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+
 
 header {
   padding:  3.75em 3.75em 0em 3.75em;
@@ -366,6 +296,20 @@ footer a svg {
 
 nav {
   margin-top: -9.6em;
+}
+
+button {
+  display: none;
+  margin-left: auto;
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+button:active {
+  font-size: 4em;
 }
 
 nav ul {
@@ -415,60 +359,32 @@ input {
 
 /* ----------- Extra foefje ----------- */
 
-input[type=checkbox] {
+.onzichtbaar {
+visibility: hidden;
+}
+
+#diamant input[type=checkbox] {
 display:none;
 }
 
-input[type=checkbox] + label
+#diamant input[type=checkbox] + label
 {
-  margin-left: auto;
-  cursor: pointer;
-  height: 2em;
-  width: 2em;
-  padding: 0;
-  background-image: url(../images/diamantzw.png);
-  background-size: 100%;
+height: 6em;
+width: 6em;
+display:inline-block;
+padding: 0 0 0 0;
+background-image: url(../images/diamantzw.png);
+background-size: 100%;
 }
 
-input[type=checkbox]:checked + label
+#diamant input[type=checkbox]:checked + label
 {
-  margin-left: auto;
-  cursor: pointer;
-  height: 2em;
-  width: 2em;
-  padding: 0;
-  background-image: url(../images/diamant.png);
-  background-size: 100%
-}
-
-/* ----------- About ----------- */
-
-main.about {
-  background-color: #d5b795;
-  grid-template-columns: repeat(auto-fill, minmax(100vw, 1fr));
-  grid-template-areas:
-    'a'
-    'b'
-  ;
-  grid-template-rows: 41.25em 40.625em;
-}
-
-section.about:nth-of-type(1) {
-  background-color: #d5b795;
-}
-
-.about section:nth-of-type(2) {
-  background-color: #fff;
-  grid-area: b;
-}
-
-.about h2 {
-  color: black;
-}
-
-.about section:nth-of-type(2) p {
-  color: black;
-  padding-left: 3.3em;
+height: 6em;
+width: 6em;
+display:inline-block;
+padding: 0 0 0 0;
+background-image: url(../images/diamant.png);
+background-size: 100%
 }
 
 /* ----------- Media Queries ----------- */
@@ -476,12 +392,6 @@ section.about:nth-of-type(1) {
 @media (min-width: 70em) {
   section:nth-of-type(1) {
   background:#b1bfcc url(../images/homepage-hero.png) no-repeat right bottom/contain
- }
-}
-
-@media (min-width: 70em) {
-  .about section:nth-of-type(1) {
-  background:#d5b795 url(https://d33wubrfki0l68.cloudfront.net/30d22e6da4bc682468105d0fce4897116d29b47b/5cc16/images/tan_hero_mobile.png) no-repeat right bottom/contain
  }
 }
 
@@ -499,33 +409,10 @@ section.about:nth-of-type(1) {
 }
 
 @media (max-width: 48em) {
-  nav ul:nth-of-type(1) {
+  nav ul {
     display: none;
   }
   button {
-    opacity: 1;
+    display: block;
   }
-  ul:nth-of-type(2) {
-    opacity: 0;
-  }
-  section:nth-of-type(1) {
-    padding-left: 1.9em;
-  }
-  header {
-    padding: 3.75em 1.9em 1.9em 1.9em;
-  }
-  h2 {
-    margin-left: 0.75em;
-    margin-right: 0.75em;
-  }
-  section a p {
-    padding-left: 1.55em;
-    padding-right: 1.55em;
-  }
-  section:nth-of-type(5) {
-  padding-left: 2em;
-  }
-  footer {
-  padding: 1.9em;
-  }
-  }
+}
