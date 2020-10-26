@@ -390,7 +390,7 @@ footer {
   background-color: #f2f7f7;
   color: #858585;
   grid-template-areas: 
-    "a b b . . . c c d d d d"
+    "a b b b . . c c d d d d"
   ;
 }
 
@@ -494,12 +494,28 @@ section.about:nth-of-type(1) {
 }
 
 .about h2 {
+  width: 42%;
   color: black;
+  border-bottom: 0.063em solid black
 }
 
 .about section:nth-of-type(2) p {
   color: black;
   padding-left: 3.3em;
+}
+
+.about section p {
+    padding-bottom: 0em;
+}
+
+.about section img {
+  height: 32em;
+  margin-right: 7em;
+  margin-top: -35.2em;
+}
+
+.aboutFooter {
+  background-color: #f7f7f7;
 }
 
 /* ----------- Media Queries ----------- */
@@ -531,7 +547,22 @@ section.about:nth-of-type(1) {
     'd d d'
     'e e e'
   ;
+  }
 }
+
+@media (max-width: 57em) {
+  footer {
+  padding: 1.9em;
+  grid-template-areas: 
+    "a a a . . . . b b b b b"
+  ;
+  }
+  footer nav {
+  display: none;
+  }
+  footer ul {
+  display: none;
+  }
 }
 
 @media (max-width: 48em) {
@@ -564,4 +595,4 @@ section.about:nth-of-type(1) {
   footer {
   padding: 1.9em;
   }
-  }
+}
