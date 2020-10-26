@@ -441,11 +441,47 @@ input[type=checkbox]:checked + label
   background-size: 100%
 }
 
+/* ----------- About ----------- */
+
+main.about {
+  background-color: #d5b795;
+  grid-template-columns: repeat(auto-fill, minmax(100vw, 1fr));
+  grid-template-areas:
+    'a'
+    'b'
+  ;
+  grid-template-rows: 41.25em 40.625em;
+}
+
+section.about:nth-of-type(1) {
+  background-color: #d5b795;
+}
+
+.about section:nth-of-type(2) {
+  background-color: #fff;
+  grid-area: b;
+}
+
+.about h2 {
+  color: black;
+}
+
+.about section:nth-of-type(2) p {
+  color: black;
+  padding-left: 3.3em;
+}
+
 /* ----------- Media Queries ----------- */
 
 @media (min-width: 70em) {
   section:nth-of-type(1) {
   background:#b1bfcc url(../images/homepage-hero.png) no-repeat right bottom/contain
+ }
+}
+
+@media (min-width: 70em) {
+  .about section:nth-of-type(1) {
+  background:#d5b795 url(https://d33wubrfki0l68.cloudfront.net/30d22e6da4bc682468105d0fce4897116d29b47b/5cc16/images/tan_hero_mobile.png) no-repeat right bottom/contain
  }
 }
 
