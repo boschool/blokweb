@@ -1,64 +1,23 @@
 /* Javascript Document */
 
-var hamburger = document.querySelector('#hamburger')
+let hamburgerButton = document.querySelector('nav > button')
+console.log(hamburgerButton)
+let closeButton = document.querySelector('ul button')
 
-function hamburgerToggle(){
-  hamburger.classList.toggle("werktniet")
+var clicked = true;
+
+function openHamburger() {
+
+    if (clicked) {
+        hamburgerButton.innerHTML = "x"
+        clicked = false;
+    } else {
+        hamburgerButton.innerHTML = "="
+        clicked = true;
+    }
+    document.body.classList.toggle('openMenu')
+
 }
 
-hamburger.addEventListener('click', hamburgerToggle);
-
-
-
-
-
-var fotos = ['foto00.png','foto01.png', 'foto02.png', 'foto03.png', 'foto04.png', 'foto05.png'];
-
-var fotoImg = document.querySelector('#foto');
-
-var huidigFotoNr = 0; // initieel op 0
-
-// settings voor automatisch vooruit bladeren, maar alleen als de gebruiker niet zelf bladert
-var bladerSnelheid = 300; // aantal milliseconden wachten
-var autoBladerTimer = null; // globale variabele wordt in updfatefuntie gebruikt
-
-toonHuidigeFoto();
-
-
-
-var diamantKnop = document.querySelector('#diamantKnop')
-
-function diamantToggle(){
-	console.log('Toggle diamant'+ diamantKnop.checked)
-	if  (diamantKnop.checked===true) {
-		fotoImg.classList.toggle('onzichtbaar')
-	}
-	else {
-		fotoImg.classList.toggle('onzichtbaar')
-		}
-	}
-
-//update de foto lijst
-function toonHuidigeFoto() {
-    //console.log('bladeren ' + huidigFotoNr);
-
-	if ( huidigFotoNr > fotos.length -1 ) { // voorbij het einde 
-		huidigFotoNr = 1; // terug naar begin
-	}
-
-	fotoImg.src = 'images/' + fotos[huidigFotoNr];
-    autoBladerTimer = setTimeout( bladerVooruit , bladerSnelheid ) 
-}
-
-// eventHandlers: animatie functie bladert in foto's vooruit
-// juiste benaming
-
-function bladerVooruit() {
-	huidigFotoNr = huidigFotoNr + 1 ;
-	toonHuidigeFoto();	
-}
-
-
-diamantKnop.addEventListener('change', diamantToggle);
-
-//wacht tot er iets gebeurt
+hamburgerButton.addEventListener('click', openHamburger)
+closeButton.addEventListener('click', openHamburger)
