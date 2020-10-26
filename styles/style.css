@@ -63,9 +63,13 @@
 h1 {
   font-family: 'Tiempos Headline','Times','Georgia',serif;
   margin-top: 0;
+  margin-bottom: 0em;
+  padding-bottom: 2.27em;
   font-size: calc(2.6em + 1vw);
   line-height: 1.18em;
   font-weight: 100;
+  border-bottom: 0.04em solid white;
+  width: 7em;
 }
 
 h2 {
@@ -117,6 +121,8 @@ section a p {
 section p a {
   font-family: 'DIN',Helvetica,Arial,sans-serif;
   padding-bottom: 0em;
+  padding-right: 1em;
+  font-size: 1.125em;
 }
 
 section p:nth-of-type(2) {
@@ -558,6 +564,23 @@ section.about:nth-of-type(1) {
   }
 }
 
+@media (max-width: 65em) {
+  .about section img {
+  margin-right: 3.75em;
+  }
+}
+
+@media (max-width: 60em) {
+  .about section img {
+  margin-right: 3.75em;
+  margin-left: 3.75em;
+  margin-top: 0em;
+  }
+  main.about {
+  grid-template-rows: 41.25em 74em;
+  }
+}
+
 @media (max-width: 57em) {
   footer {
   padding: 1.9em;
@@ -589,9 +612,18 @@ section.about:nth-of-type(1) {
   header {
     padding: 3.75em 1.9em 1.9em 1.9em;
   }
-  h2 {
+  .about h2 {
     margin-left: 0.75em;
     margin-right: 0.75em;
+    width: 7.3em;
+  }
+  .about section:nth-of-type(2) p {
+    padding-left: 1.65em
+  }
+  .about section img {
+  margin-right: 1.9em;
+  margin-left: 1.9em;
+  margin-top: 0em;
   }
   section a p {
     padding-left: 1.55em;
@@ -602,5 +634,14 @@ section.about:nth-of-type(1) {
   }
   footer {
   padding: 1.9em;
+  }
+  a {
+    display: block;
+  }
+}
+
+@media (max-width: 28em) {
+  .about section img {
+  height: 27em;
   }
 }
