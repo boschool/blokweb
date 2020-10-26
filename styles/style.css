@@ -231,7 +231,7 @@ section:nth-of-type(5) {
 }
 
 button {
-  opacity: 0;
+  display: none;
   position: absolute;
   color: white;
   top: 1.8em;
@@ -241,6 +241,11 @@ button {
   background-color: transparent;
   border: none;
   z-index: 100000;
+  cursor: pointer;
+}
+
+.donker {
+  color: #0b2436;
 }
 
 header a::after, footer a::after {
@@ -275,7 +280,10 @@ ul:nth-of-type(2) {
 ul:nth-of-type(2) li {
     margin-bottom: 1em;
     color: #0b2436;
-    background-color: grey;
+}
+
+ul:nth-of-type(2) li a {
+    color: black;
 }
 
 .openMenu ul:nth-of-type(2) {
@@ -570,7 +578,7 @@ section.about:nth-of-type(1) {
     display: none;
   }
   button {
-    opacity: 1;
+    display: block;
   }
   ul:nth-of-type(2) {
     opacity: 0;

@@ -11,9 +11,11 @@ function openHamburger() {
     if (clicked) {
         hamburgerButton.innerHTML = "x"
         clicked = false;
+        hamburgerButton.classList.add('donker');
     } else {
         hamburgerButton.innerHTML = "="
         clicked = true;
+        hamburgerButton.classList.remove('donker');
     }
     document.body.classList.toggle('openMenu')
 
